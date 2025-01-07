@@ -60,12 +60,13 @@
 </template>
 <script setup>
 import { ref, computed } from 'vue';
+import DeshopImage from '@/assets/Deshop.png'
 
 const Projects = ref([
     {
         id: 1,
         category: 'development',
-        image: '/src/assets/Deshop.png',
+        image: DeshopImage,
         title: 'Deshop',
         description: 'Desktop application for managing a store through an API created by me.',
         technologies: ['Java', 'Hibernate', 'Spring', 'MariaDB', 'JavaFX'],
