@@ -42,7 +42,7 @@
                                     </svg>
                                     <div class="download-loader text-white hidden"></div>
                                 </div>
-                                <a href="/Portfolio/CV_DanielPaz.pdf" download="CV_DanielPaz.pdf" class="pl-2 text-primary">Download CV</a>
+                                <a href="CV_DanielPaz.pdf" download="CV_DanielPaz.pdf" class="pl-2 text-primary">Download CV</a>
                             </div>
                         </button>
                     </div>
