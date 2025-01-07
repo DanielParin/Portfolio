@@ -65,7 +65,7 @@ const Projects = ref([
     {
         id: 1,
         category: 'development',
-        image: 'src/assets/Deshop.png',
+        image: '/src/assets/Deshop.png',
         title: 'Deshop',
         description: 'Desktop application for managing a store through an API created by me.',
         technologies: ['Java', 'Hibernate', 'Spring', 'MariaDB', 'JavaFX'],
