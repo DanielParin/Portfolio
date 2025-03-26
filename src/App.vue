@@ -7,8 +7,11 @@
          <div>
             <NavBar />
             <HeroSection />
+            <ServiceSection />
             <AboutSection />
-            <ExperienceAndSkills />
+            <ExperienceSection />
+            <EducationSection />
+            <SkillSection />
             <LatestProjSection />
             <Footer />
             <BackToTop />
@@ -28,9 +31,12 @@
 //Import Components Asynchronously
 const NavBar = defineAsyncComponent(()=>import('@/components/NavBar.vue'));
 const HeroSection = defineAsyncComponent(()=>import('@/components/HeroSection.vue'));
+const ServiceSection = defineAsyncComponent(() => import('@/components/ServiceSection.vue'));
 const AboutSection = defineAsyncComponent(()=>import('@/components/AboutSection.vue'));
 const LatestProjSection = defineAsyncComponent(()=>import('@/components/LatestProjectSection.vue'));
-const ExperienceAndSkills = defineAsyncComponent(()=>import('@/components/ExperienceSection.vue'));
+const ExperienceSection = defineAsyncComponent(()=>import('@/components/ExperienceSection.vue'));
+const EducationSection = defineAsyncComponent(()=>import('@/components/EducationSection.vue'));
+const SkillSection = defineAsyncComponent(()=>import('@/components/SkillSection.vue'))
 const Footer = defineAsyncComponent(()=>import('@/components/Footer.vue'));
 const BackToTop = defineAsyncComponent(()=>import('@/components/BackToTop.vue'));
 import loadingSpinner from './components/LoadingSpinner.vue';

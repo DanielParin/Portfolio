@@ -1,59 +1,38 @@
 <template>
-    <section class="text-white mt-18" id="about">
-        <div class="absolute z-0 top-[93rem] inset-x-0 h-64 flex items-start">
-            <div class="h-24 w-64 bg-gradient-to-br from-primary via-secondary blur-2xl to-[#570cac] opacity-20"></div>
-        </div>
-        <div class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 z-1">
-            <!-- Sección de Educación -->
-            <div class="h-full" data-aos="flip-right">
-                <h2 class="text-4xl font-bold text-white text-left mb-8">My Education</h2>
-                <div class="space-y-8 py-8">
-                    <div v-for="element in education" :key="element.id"
-                    class="flex items-center md:w-[80%] w-full rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]"
-                    >
-                        <div class="w-1/4">
-                            <img src="https://img.icons8.com/ios-glyphs/60/ffffff/graduation-cap--v1.png" alt="graduation-cap--v1">
-                        </div>
-                        <div class="w-3/4 pl-4">
-                            <h3 class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl">
-                                {{ element.School }}
-                            </h3>
-                            <p class="text-white">{{ element.program }}</p>
-                            <p class="text-white">{{ element.year }}</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="text-white mt-8 mb-8 w-full" id="about"> <!-- Eliminamos 'flex justify-center' -->
+        <!-- Contenedor del fondo de la sección -->
+        <div class="relative w-full flex justify-center">
+            <div class="absolute z-0 inset-x-0 h-64 flex items-start">
+                <div class="h-24 w-64 bg-gradient-to-br from-primary via-secondary blur-2xl to-[#570cac] opacity-20"></div>
             </div>
+        </div>
 
-            <!-- Sección "About Me" con margen superior añadido -->
-            <div class="mt-8 md:mt-0 text-left flex flex-col z-10 h-full" data-aos="flip-right">
-                <h2 class="text-4xl font-bold text-white md:text-center text-left mb-4">More
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">About</span>
-                    Me
+        <!-- Contenedor principal, centrado correctamente -->
+        <div class="max-w-5xl mx-auto px-6 py-8"> <!-- max-w-5xl y mx-auto para el centrado -->
+            <!-- Sección "About Me" -->
+            <div class="w-full text-center flex flex-col" data-aos="flip-right">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    More About <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Me</span>
                 </h2>
-                <p class="text-base lg:text-lg mt-8 py-8">
+
+                <p class="text-base lg:text-lg mt-4 py-4">
                     I am a software developer with little experience. I focus on backend projects, although I have knowledge 
                     of frontend as well. My main focus is on developing software using the Go and Java programming languages.
                 </p>
-                <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
+
+                                <!-- Estadísticas de experiencia centradas -->
+                <div class="grid grid-cols-1 gap-4 max-w-lg mx-auto pt-4"> <!-- Cambié grid-cols-3 a grid-cols-1 para centrar -->
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
                         <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">1</h3>
-                        <p class="text-sm sm:text-base text-gray-300"> Year Experience</p>
+                        <p class="text-sm sm:text-base text-gray-300">Year Experience</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-const education=ref([
-    {
-        id:1,
-        School:'IES Luis Vives',
-        program:'Cross-platform Software Development',
-        year:'2022-2024'
-    },
-])
-</script>
+
+
+
